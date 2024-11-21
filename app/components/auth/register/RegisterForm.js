@@ -108,13 +108,13 @@ export default function RegisterForm() {
       // Update user profile with the given name
       await updateProfile(userCredential?.user, { displayName: data.name });
 
-      console.log("verify uid (client)", userCredential?.user?.uid);
+      // console.log("verify uid (client)", userCredential?.user?.uid);
 
-      await fetch("/api/verify", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ uid: userCredential?.user?.uid }),
-      });
+      // await fetch("/api/verify", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ uid: userCredential?.user?.uid }),
+      // });
 
       // Send email verification to new user
       // await sendEmailVerification(userCredential?.user);
