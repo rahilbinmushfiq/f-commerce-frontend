@@ -47,7 +47,7 @@
 
   /* For footer social links */
   .social-links a {
-    @apply text-neutral-500 hover:text-neutral-900 [&>svg]:size-4 [&>svg]:transition-[color] [&>svg]:duration-300 [&>svg]:ease-in-out min-[450px]:[&>svg]:size-5;
+    @apply text-neutral-500 hover:text-neutral-900 [&>svg]:size-6 [&>svg]:transition-[color] [&>svg]:duration-300 [&>svg]:ease-in-out xl:[&>svg]:size-5;
   }
 
   /* For social icon links */
