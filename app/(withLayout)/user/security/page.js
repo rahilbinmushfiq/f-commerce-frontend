@@ -135,7 +135,7 @@ export default function Profile() {
       <form
         noValidate
         onSubmit={handleSubmit(onSubmit, onError)}
-        className="user-info bottom-5 top-5 grow rounded-xl border-2 border-neutral-50/20 bg-white/40 p-5 shadow-[0_0_20px_0_rgba(0,0,0,0.05)] backdrop-blur-2xl max-sm:space-y-4 sm:sticky sm:flex sm:gap-4"
+        className="user-info bottom-5 top-5 grow rounded-xl border-2 border-neutral-50/20 bg-white/40 p-5 shadow-[0_0_20px_0_rgba(0,0,0,0.05)] backdrop-blur-2xl max-lg:space-y-4 sm:gap-4 lg:sticky lg:flex"
       >
         <section className="w-full space-y-4 rounded-md border-2 border-neutral-200 p-5">
           <h2 className="text-lg font-semibold uppercase md:text-xl">

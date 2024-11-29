@@ -193,19 +193,19 @@ export default function DeliveryAddress({
       className="w-full space-y-4 rounded-md border-2 border-[#eeeeee] p-3.5 sm:p-5"
       id={type === "new" ? "new-adddress-form" : "update-address-form"}
     >
-      <div className="flex justify-between gap-4 sm:items-center">
-        <div className="flex gap-2 text-base font-semibold max-sm:flex-col sm:items-center md:text-lg">
+      <div className="flex justify-between gap-4 lg:items-center">
+        <div className="flex w-full gap-2 text-base font-semibold max-lg:flex-col md:text-lg lg:items-center">
           <div className="flex items-end justify-between">
             <label
               htmlFor="nickname"
-              className="text-nowrap !text-[17px] sm:!text-lg"
+              className="text-nowrap !text-[17px] lg:!text-lg"
             >
               Address #
               {type === "new"
                 ? newAddressIndex + ":"
                 : `${addressNumber}${!!address?.nickname || isEditingForm ? ":" : ""}`}
             </label>
-            <div className="sm:hidden">
+            <div className="lg:hidden">
               <FormEditorButton
                 reset={reset}
                 isEditingForm={isEditingForm}
@@ -241,14 +241,14 @@ export default function DeliveryAddress({
             //       ? "w-full border-neutral-300 focus:border-neutral-400"
             //       : "w-fit border-transparent !text-neutral-700"
             // }`}
-            className="!text-[17px] sm:!text-lg"
+            className="!text-[17px] lg:!text-lg"
             placeholder={
               type === "update" && !isEditingForm ? "" : "Address nickname"
             }
             autoComplete="off"
           />
         </div>
-        <div className="max-sm:hidden">
+        <div className="max-lg:hidden">
           <FormEditorButton
             reset={reset}
             isEditingForm={isEditingForm}
@@ -260,8 +260,8 @@ export default function DeliveryAddress({
           />
         </div>
       </div>
-      <div className="space-y-8">
-        <div className="max-sm:space-y-4 sm:flex sm:gap-x-10">
+      <div className="space-y-8 max-lg:space-y-4">
+        <div className="max-lg:space-y-4 lg:flex lg:gap-x-10">
           <div className="w-full space-y-2 font-semibold">
             <label htmlFor="address-one">Address Line 1</label>
             {/* <input
@@ -352,7 +352,7 @@ export default function DeliveryAddress({
             )}
           </div>
         </div>
-        <div className="max-sm:space-y-4 sm:flex sm:gap-x-10">
+        <div className="max-lg:space-y-4 lg:flex lg:gap-x-10">
           <div className="w-full space-y-2 font-semibold">
             <Controller
               name="city"

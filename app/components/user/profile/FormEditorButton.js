@@ -31,13 +31,13 @@ export default function FormEditorButton({
     return isEditingForm ? (
       // Display canel and save buttons if form is being edited
       <div className="flex gap-2.5">
-        <button className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-sm:[&_p]:hidden max-sm:[&_svg]:size-4">
+        <button className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-md:[&_p]:hidden max-md:[&_svg]:size-4">
           <RiSaveLine className="text-base" />
           <p>Save</p>
         </button>
         <button
           type="button"
-          className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-sm:[&_p]:hidden max-sm:[&_svg]:size-4"
+          className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-md:[&_p]:hidden max-md:[&_svg]:size-4"
           onClick={() => {
             handleAddressReset();
             setIsEditingForm(false);
@@ -54,7 +54,7 @@ export default function FormEditorButton({
         <div className="flex gap-2.5">
           <button
             type="button"
-            className="flex items-center gap-1.5 rounded-md bg-red-50 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-red-100 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-sm:[&_p]:hidden max-sm:[&_svg]:size-4"
+            className="flex items-center gap-1.5 rounded-md bg-red-50 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-red-100 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-md:[&_p]:hidden max-md:[&_svg]:size-4"
             onClick={() => setIsOpen(true)}
           >
             <RiDeleteBin7Line className="text-base" />
@@ -62,7 +62,7 @@ export default function FormEditorButton({
           </button>
           <button
             type="button"
-            className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-sm:[&_p]:hidden max-sm:[&_svg]:size-4"
+            className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-md:[&_p]:hidden max-md:[&_svg]:size-4"
             onClick={() => setIsEditingForm(true)}
           >
             <RiEditLine className="text-base" />
@@ -122,13 +122,13 @@ export default function FormEditorButton({
   else
     return (
       <div className="flex gap-2.5">
-        <button className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-sm:[&_p]:hidden max-sm:[&_svg]:size-4">
+        <button className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-md:[&_p]:hidden max-md:[&_svg]:size-4">
           <RiSaveLine className="text-base" />
           <p>Save</p>
         </button>
         <button
           type="button"
-          className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-sm:[&_p]:hidden max-sm:[&_svg]:size-4"
+          className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-1.5 font-semibold text-neutral-600 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 hover:text-neutral-700 sm:p-2.5 [&_p]:text-xs max-md:[&_p]:hidden max-md:[&_svg]:size-4"
           onClick={() => {
             handleAddressReset();
             setIsAddingNewAddress(false);

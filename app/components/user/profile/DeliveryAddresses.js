@@ -25,7 +25,7 @@ export default function DeliveryAddresses({
           Delivery Address
         </h2>
         <button
-          className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] max-sm:[&_p]:hidden max-sm:[&_svg]:size-4"
+          className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] max-md:[&_p]:hidden max-md:[&_svg]:size-4"
           onClick={() => setIsAddingNewAddress(true)}
         >
           <RiAddLine className="text-base" />

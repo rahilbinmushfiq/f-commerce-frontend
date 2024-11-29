@@ -177,13 +177,13 @@ export default function PersonalInfo({
           </h2>
           {isEditingForm ? (
             <div className="flex gap-2.5">
-              <button className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] max-sm:[&_p]:hidden max-sm:[&_svg]:size-4">
+              <button className="flex items-center gap-1.5 rounded-md bg-[#d4ffce] p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-[#bdf6b4] max-md:[&_p]:hidden max-md:[&_svg]:size-4">
                 <RiSaveLine className="text-base" />
                 <p>Save</p>
               </button>
               <button
                 type="button"
-                className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 max-sm:[&_p]:hidden max-sm:[&_svg]:size-4"
+                className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 max-md:[&_p]:hidden max-md:[&_svg]:size-4"
                 onClick={() => {
                   reset({
                     name: user?.displayName,
@@ -203,7 +203,7 @@ export default function PersonalInfo({
           ) : (
             <button
               type="button"
-              className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 max-sm:[&_p]:hidden max-sm:[&_svg]:size-4"
+              className="flex items-center gap-1.5 rounded-md bg-neutral-100 p-2.5 text-xs font-semibold text-neutral-700 transition-[transform,color,background-color] duration-300 ease-in-out hover:bg-neutral-200 max-md:[&_p]:hidden max-md:[&_svg]:size-4"
               onClick={() => setIsEditingForm(true)}
             >
               <RiEditLine className="text-base" />
@@ -211,8 +211,8 @@ export default function PersonalInfo({
             </button>
           )}
         </div>
-        <div className="space-y-8">
-          <div className="max-sm:space-y-4 sm:flex sm:gap-x-10">
+        <div className="space-y-8 max-lg:space-y-4">
+          <div className="max-lg:space-y-4 lg:flex lg:gap-x-6 xl:gap-x-10">
             <div className="w-full space-y-2 font-semibold">
               <label htmlFor="name">Full Name</label>
               <input
@@ -278,7 +278,7 @@ export default function PersonalInfo({
               )}
             </div>
           </div>
-          <div className="max-sm:space-y-4 sm:flex sm:gap-x-10">
+          <div className="max-lg:space-y-4 lg:flex lg:gap-x-6 xl:gap-x-10">
             <div className="w-full space-y-2 font-semibold">
               <label htmlFor="primary-mobile">Mobile Number</label>
               <input
@@ -329,7 +329,7 @@ export default function PersonalInfo({
               )}
             </div>
           </div>
-          <div className="max-sm:space-y-4 sm:flex sm:gap-x-10">
+          <div className="max-lg:space-y-4 lg:flex lg:gap-x-6 xl:gap-x-10">
             <div className="relative w-full space-y-2 font-semibold">
               <Controller
                 name="hometown"
@@ -405,7 +405,7 @@ export default function PersonalInfo({
                       calendarContent:
                         "min-w-64 [&_td>span:hover]:bg-[#c2f3ba] [&_td>span:hover]:text-[#3f7136] [&_td>span[data-selected='true']]:bg-[#58944d] [&_td>span[data-selected='true']]:text-white [&_td>span[data-selected='true']:hover]:bg-[#58944d] [&_td>span[data-selected='true']:hover]:text-white",
                     }}
-                    className={`date-picker mt-1 gap-1 transition-opacity duration-300 ease-in-out [&>div:focus-within:hover]:border-[#F4D3BA] [&>div:focus-within]:border-[#F4D3BA] [&>div:hover]:border-[#F4D3BA] [&>div]:bg-white/20 [&[data-disabled='true']>div]:opacity-50 [&[data-disabled='true']]:opacity-100 [&_[data-slot='input-field']]:font-semibold [&_[data-slot='label']]:!text-sm [&_[data-slot='label']]:text-neutral-500 md:[&_[data-slot='label']]:!text-sm ${isEditingForm || additionalUserInfo?.dob ? "[&>div]:!opacity-100" : "[&>div]:!opacity-0"}`}
+                    className={`date-picker mt-1 gap-1 transition-opacity duration-300 ease-in-out [&>div:focus-within:hover]:border-[#F4D3BA] [&>div:focus-within]:border-[#F4D3BA] [&>div:hover]:border-[#F4D3BA] [&>div]:bg-white/20 [&>span]:mb-1 [&[data-disabled='true']>div]:opacity-50 [&[data-disabled='true']]:opacity-100 [&_[data-slot='input-field']]:font-semibold [&_[data-slot='label']]:!text-sm [&_[data-slot='label']]:text-neutral-500 md:[&_[data-slot='label']]:!text-sm ${isEditingForm || additionalUserInfo?.dob ? "[&>div]:!opacity-100" : "[&>div]:!opacity-0"}`}
                   />
                 )}
               />
