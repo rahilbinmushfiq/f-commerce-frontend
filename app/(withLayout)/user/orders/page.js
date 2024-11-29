@@ -37,6 +37,7 @@ import fileUploadSVG from "@/public/return-order/upload.svg";
 import { Controller, useFieldArray, useForm } from "react-hook-form";
 import { MdCancel } from "react-icons/md";
 import { useLoading } from "@/app/contexts/loading";
+import Link from "next/link";
 
 export default function Orders() {
   // const { user } = useAuth();
@@ -288,7 +289,7 @@ export default function Orders() {
                       View Details
                       <LuFileText size={14} />
                     </TransitionLink>
-                    <TransitionLink
+                    {/* <TransitionLink
                       href={order.invoiceLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -296,24 +297,24 @@ export default function Orders() {
                     >
                       Invoice
                       <LuDownload size={14} />
-                    </TransitionLink>
+                    </TransitionLink> */}
                     {(order.status.text === "Processing" ||
                       order.status.text === "Shipped") && (
                       <button
-                        className="flex items-center gap-2 rounded-lg bg-neutral-100 px-4 py-2.5 text-center text-xs font-semibold text-neutral-700 transition-[background-color] duration-300 hover:bg-neutral-200 max-sm:w-full max-sm:justify-center"
+                        className="flex items-center gap-2 rounded-lg bg-[#d4ffce] px-4 py-2.5 text-center text-xs font-semibold text-neutral-700 transition-[background-color] duration-300 hover:bg-[#bdf6b4] max-sm:w-full max-sm:justify-center"
                         onClick={() => {
                           setActiveTrackOrder(order);
                           setIsTrackModalOpen(true);
                         }}
                       >
-                        Track
+                        Track Order
                         <LuTruck size={14} />
                       </button>
                     )}
                     {order.isReturnable &&
                       order.status.text !== "Return Requested" && (
                         <button
-                          className="flex items-center gap-2 rounded-lg bg-neutral-100 px-4 py-2.5 text-center text-xs font-semibold text-neutral-700 transition-[background-color] duration-300 hover:bg-neutral-200 max-sm:w-full max-sm:justify-center"
+                          className="flex items-center gap-2 rounded-lg bg-[#d4ffce] px-4 py-2.5 text-center text-xs font-semibold text-neutral-700 transition-[background-color] duration-300 hover:bg-[#bdf6b4] max-sm:w-full max-sm:justify-center"
                           onClick={() => {
                             // remove();
 
@@ -336,7 +337,7 @@ export default function Orders() {
                             setIsReturnModalOpen(true);
                           }}
                         >
-                          Return
+                          Return Order
                           <IoReturnDownBack size={14} />
                         </button>
                       )}
@@ -435,9 +436,25 @@ export default function Orders() {
                         />
                       </div>
                       {!!activeTrackOrder?.shipment?.trackingCode && (
+                        <Link
+                          href="https://merchant.pathao.com/"
+                          target="_blank"
+                          className="mx-auto !mt-9 flex h-12 w-fit"
+                        >
+                          <Image
+                            src={activeTrackOrder?.shipment?.courierImgUrl}
+                            alt={activeTrackOrder?.shipment?.courier}
+                            width={0}
+                            height={0}
+                            className="h-full w-full select-none object-contain"
+                            sizes="75vw"
+                          />
+                        </Link>
+                      )}
+                      {!!activeTrackOrder?.shipment?.trackingCode && (
                         <TransitionLink
                           href="/order-tracking"
-                          className="mx-auto my-9 flex w-fit items-center gap-2 rounded-lg bg-[#d4ffce] px-4 py-2.5 text-center text-sm font-semibold text-neutral-600 transition-[background-color] duration-300 hover:bg-[#bdf6b4]"
+                          className="mx-auto !mt-3 mb-9 flex w-fit items-center gap-2 rounded-lg bg-[#d4ffce] px-4 py-2.5 text-center text-sm font-semibold text-neutral-600 transition-[background-color] duration-300 hover:bg-[#bdf6b4]"
                         >
                           Track Your Package
                           <LuBox size={17} />

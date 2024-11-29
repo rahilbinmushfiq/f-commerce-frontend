@@ -87,6 +87,7 @@ export const orders = [
     },
     shipment: {
       courier: "Pathao",
+      courierImgUrl: "/delivery-partners/pathao.webp",
       date: "August 02 2024",
       time: "10:15 PM",
       trackingCode: "217-492-604",
@@ -163,6 +164,7 @@ export const orders = [
     },
     shipment: {
       courier: "Pathao",
+      courierImgUrl: "/delivery-partners/pathao.webp",
       date: "August 02 2024",
       time: "10:15 PM",
       trackingCode: "217-492-604",
@@ -239,6 +241,7 @@ export const orders = [
     },
     shipment: {
       courier: "Pathao",
+      courierImgUrl: "/delivery-partners/pathao.webp",
       date: "February 13 2024",
       time: "09:26 AM",
       trackingCode: "985-406-542",
@@ -287,6 +290,7 @@ export const orders = [
     },
     shipment: {
       courier: "Pathao",
+      courierImgUrl: "/delivery-partners/pathao.webp",
       date: "December 06 2024",
       time: "09:52 AM",
       trackingCode: "217-492-604",
