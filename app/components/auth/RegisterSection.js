@@ -3,10 +3,14 @@ import RegisterForm from "./register/RegisterForm";
 
 export default function RegisterSection({ children }) {
   return (
-    <>
+    <div className="sm:max-xl:mx-auto sm:max-xl:max-w-[350px]">
       {/* Heading */}
-      <h1 className="text-2xl font-semibold">Create Account</h1>
-      <p className="mb-10 mt-2">Sign up to get started.</p>
+      <h1 className="text-2xl font-semibold sm:max-xl:text-center">
+        Create Account
+      </h1>
+      <p className="mb-10 mt-2 sm:max-xl:text-center">
+        Sign up to get started.
+      </p>
       {/* Login page link if user has account */}
       {/* <p className="mb-4 flex justify-between text-xs font-bold md:text-sm">
         Already have an account?{" "}
@@ -30,6 +34,6 @@ export default function RegisterSection({ children }) {
           Login
         </TransitionLink>
       </p>
-    </>
+    </div>
   );
 }

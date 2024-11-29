@@ -46,7 +46,7 @@ export default function SideImageSection() {
   }, []);
 
   return (
-    <section className="relative hidden grow overflow-hidden rounded-xl sm:flex xl:ml-[2vw]">
+    <section className="relative hidden grow overflow-hidden rounded-xl xl:ml-[2vw] xl:flex">
       {backendImgUrls.authCarousel.map((image, imageIdx) => {
         return (
           <Image

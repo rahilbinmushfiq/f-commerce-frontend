@@ -3,10 +3,12 @@ import LoginForm from "./login/LoginForm";
 
 export default function LoginSection({ children }) {
   return (
-    <>
+    <div className="sm:max-xl:mx-auto sm:max-xl:max-w-[350px]">
       {/* Heading */}
-      <h1 className="text-2xl font-semibold">Welcome Back</h1>
-      <p className="mb-10 mt-2">
+      <h1 className="text-2xl font-semibold sm:max-xl:text-center">
+        Welcome Back
+      </h1>
+      <p className="mb-10 mt-2 sm:max-xl:text-center">
         Enter your credentials to access your account.
       </p>
       {/* Email and password login section */}
@@ -22,6 +24,6 @@ export default function LoginSection({ children }) {
           Register
         </TransitionLink>
       </p>
-    </>
+    </div>
   );
 }
