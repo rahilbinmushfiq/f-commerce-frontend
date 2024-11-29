@@ -1,3 +1,5 @@
+"use client";
+
 import TransitionLink from "@/app/components/ui/TransitionLink";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -8,8 +10,11 @@ import vector1 from "../../../../../public/bg-banner/vector1.png";
 import vector2 from "../../../../../public/bg-banner/vector2.png";
 import Image from "next/image";
 import { backendImgUrls } from "@/app/data/backendImgUrls";
+import { useAuth } from "@/app/contexts/auth";
 
 const Banner = () => {
+  const { user } = useAuth();
+
   return (
     <div className="relative flex h-dvh flex-col px-5 pb-6 pt-[100px] sm:h-[65dvh] sm:px-8 sm:pt-32 lg:px-12 xl:mx-auto xl:max-w-[1200px] xl:px-0 2xl:pb-[6vh] 2xl:pt-[calc(88px+6vh)] portrait:md:h-[75dvh] portrait:lg:h-[60dvh] landscape:h-dvh">
       <div className="z-[-2]">
@@ -47,12 +52,14 @@ const Banner = () => {
               <FaArrowRightLong size={12} />
             </span>
           </TransitionLink>
-          <TransitionLink
-            href="/login"
-            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FBEDE2] px-4 py-2.5 text-sm font-semibold transition-[background-color] duration-300 ease-in-out hover:bg-[#F4D3BA]"
-          >
-            Join Us
-          </TransitionLink>
+          {!user && (
+            <TransitionLink
+              href="/login"
+              className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FBEDE2] px-4 py-2.5 text-sm font-semibold transition-[background-color] duration-300 ease-in-out hover:bg-[#F4D3BA]"
+            >
+              Join Us
+            </TransitionLink>
+          )}
         </div>
       </div>
       <div className="hero-images pointer-events-none flex grow justify-center gap-2 max-sm:mt-7 max-sm:flex-wrap md:-mt-2 md:gap-3 xl:-mt-3 xl:justify-between xl:gap-4 landscape:mt-auto landscape:max-h-[550px]">
